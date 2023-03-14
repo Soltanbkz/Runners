@@ -1,12 +1,10 @@
 import random
 import time
 
-
 def shyrky_more_than_1():
     y = int(input("У скольки учасников развизались шнурки: "))
     shnyrky_sum = []
     for i in range(y):
-        list_runners = [int(i) for i in range(1, runners + 1)]
         shnyrky = random.choice(list_runners)
         shnyrky_sum.append(shnyrky)
         index_shnyrky = list_runners.index(shnyrky)
@@ -17,6 +15,7 @@ def shyrky_more_than_1():
 
 def runners():
     global runners
+    global list_runners
     runners = int(input("Количество бегунов: "))
     list_runners = [int(i) for i in range(1, runners+1)]
     shnyrky = random.choice(list_runners)
@@ -33,3 +32,5 @@ def runners():
     else:
         print("ОК")
 runners()
+
+input()
